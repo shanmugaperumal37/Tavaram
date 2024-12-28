@@ -1,0 +1,4 @@
+Corn (Maize): Common Rust
+
+Reason: Puccinia sorghi causes reddish pustules on corn leaves, which disrupt photosynthesis.
+Treatment: Use fungicides to control the fungus and rotate crops to prevent reinfection.

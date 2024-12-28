@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#008000">
+
+    <!-- Top Banner -->
+    <LinearLayout
+        android:id="@+id/topBanner"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF"
+            android:contentDescription="@string/TODO"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/logo_round" />
+    </LinearLayout>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBanner"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/imagePathInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/select_image"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#808080"
+            android:autofillHints="text" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#008000"
+            android:text="@string/Submit"
+            android:textColor="#FFFFFF"
+            android:onClick="onSubmitClick" />
+    </LinearLayout>
+
+    <!-- Display Inputted Image -->
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/inputSection"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/select_image"
+        android:scaleType="centerCrop" />
+
+    <!-- Result Section -->
+    <TextView
+        android:id="@+id/diseaseResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectedImage"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text=""
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Disease Note Section -->
+    <TextView
+        android:id="@+id/diseaseNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diseaseResult"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <!-- Language Selection Buttons -->
+    <LinearLayout
+        android:id="@+id/languageButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diseaseNote"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textStyle="bold">
+
+        <Button
+            android:id="@+id/tamilButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/tamil"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:onClick="onLanguageSelect" />
+
+        <Button
+            android:id="@+id/englishButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/english"
+            android:textColor="#FFFFFF"
+            android:onClick="onLanguageSelect" />
+    </LinearLayout>
+
+    <!-- Bottom Banner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:gravity="center"
+        android:orientation="vertical" />
+</RelativeLayout>

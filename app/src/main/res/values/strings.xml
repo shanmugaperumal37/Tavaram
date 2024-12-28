@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tavaram</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="select_image">Selected Image</string>
+    <string name="english">english</string>
+    <string name="TODO">TODO</string>
+    <string name="input_text">Enter image path</string>
+    <string name="Submit">Submit</string>
+</resources>
